@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewponit" content="width=device-width, initial-scale=1.0">
+        <title> Index</title>
+    </head>
+
+    <body>
+        TOTAL DE MÃÇAS: <span id="total_maca">0</span>
+       <img onclick="Executar('m');" src='maca.png' width="100px">
+
+        TOTAL DE BANANA: <span id="total_banana">0</span>
+       <img onclick="Executar('b');" src='banana.png' width="100px">
+
+        TOTAL DE UVA: <span id="total_uva">0</span>
+       <img onclick="Executar('u');" src='uva.png' width="100px">
+
+       <button onclick="Limpar();">Limpar</button>
+       <div class="escolha" id="escolha">Escolha uma Fruta</div>
+
+       
+        <div class="maca" id="maca">Clique em uma Fruta</div>
+        <div class="uva" id="uva">Clique em uma Fruta</div>
+        <div class="banana" id="banana">Clique em uma Fruta</div>
+    </body>
+        
+    <script>
+        m = 0;
+        b = 0;
+        u = 0;
+        function Limpar() //Limpar a parada
+        {
+           maca.innerHTML ="";
+           banana.innerHTML ="";
+           uva.innerHTML ="";
+           total_maca.innerHTML=0;
+           total_banana.innerHTML=0;
+           total_uva.innerHTML=0;
+           m = 0;
+           b = 0;
+           u = 0;
+        }
+
+        function Executar(letra) //Colocar fruta na parada
+        {
+            if(letra=='m'){
+                m = m + 1;
+                total_maca.innerHTML = m;
+            maca.innerHTML += "<img src='maca.png'>";}
+
+            if(letra=='b'){
+                b = b + 1;
+                total_banana.innerHTML = b;
+            banana.innerHTML += "<img src='banana.png'>";}
+
+            if(letra=='u'){
+                u = u + 1;
+                total_uva.innerHTML = u;
+            uva.innerHTML += "<img src='uva.png'>";}
+
+        }
+    </script>
+</html>
